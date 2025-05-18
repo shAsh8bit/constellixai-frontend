@@ -88,7 +88,7 @@ export default function QueryTutorial({ onClose, onUseExample }: QueryTutorialPr
         />
 
         <TutorialExample
-          title="Defne you own Complex structured query based on your needs"
+          title="Defne your own Complex structured query based on your needs"
           queryCode={multiConditionExample}
           jsonData={exampleJsonData.multiConditionData}
           description=""

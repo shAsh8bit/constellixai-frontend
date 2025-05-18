@@ -109,7 +109,7 @@ export default function Playground() {
 
         <div className="bg-gray-900/30 backdrop-blur-md p-6 rounded-lg border border-gray-800/50 shadow-xl mb-6">
           <form onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-20">
+            <div className="flex flex-col gap-25 md:gap-10">
             <ControlPanel 
               url={url}
               setUrl={setUrl}

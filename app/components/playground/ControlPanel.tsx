@@ -59,6 +59,14 @@ export default function ControlPanel({
       setQuery(selectedExample.query);
       onFetchWebsite();
       setSelectedExample(null);
+      if (window.innerWidth < 770) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth',
+          });
+        }, 0)
+      }
     }
   }, [selectedExample]);
 
