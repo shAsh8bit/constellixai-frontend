@@ -4,14 +4,15 @@ import React from 'react';
 
 interface SubmitButtonProps {
   isLoading: boolean;
+  isFetching: boolean;
 }
 
-export default function SubmitButton({ isLoading }: SubmitButtonProps) {
+export default function SubmitButton({ isLoading, isFetching }: SubmitButtonProps) {
   return (
     <div className="flex justify-end">
       <button
         type="submit"
-        disabled={isLoading}
+        disabled={isLoading || isFetching}
         className="px-5 py-2.5 mt-2 rounded-md bg-gray-800/40 border border-[#52c4c6]/40 
           text-[#52c4c6] text-sm font-medium hover:bg-gray-700/50 transition-colors
           disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shadow-lg"

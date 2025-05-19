@@ -43,8 +43,7 @@ export default function ControlPanel({
   top_products_today[] {
     product_names, 
     product_description,
-    comments(Number of comments),
-    upvotes(Number),
+    topics[]
   },
  top_products_yesterday(Just get the product's names)[],
  top_product_last_month {

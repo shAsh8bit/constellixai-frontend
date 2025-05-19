@@ -26,7 +26,7 @@ export default function WebsitePreview({ imageSrc, isLoading = false }: WebsiteP
               </div>
             )}
             <div className="w-full">
-              {imageSrc && (
+              {(imageSrc && !isLoading) && (
                 <img 
                   src={imageSrc} 
                   alt="Website Preview" 

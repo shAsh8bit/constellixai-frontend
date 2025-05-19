@@ -135,7 +135,7 @@ export default function Playground() {
               <WebsitePreview imageSrc={imageSrc} isLoading={isFetchingWebsite} />
             </div>
             </div>
-            <SubmitButton isLoading={isLoading} />
+            <SubmitButton isLoading={isLoading} isFetching={isFetchingWebsite}/>
           </form>
         </div>
 

@@ -1,6 +1,7 @@
 export async function captureScreenshot(url: string): Promise<{screenshot: string, markdown: string} | null> {
   try {
-    const response = await fetch('http://localhost:3001/api/screenshot', {
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const response = await fetch(`${backendUrl}/api/screenshot`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
