@@ -2,12 +2,9 @@
 
 export async function extractData(markdown: string, query: string, apiKey: string): Promise<string | null> {
     try {
-        const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
-        const response = await fetch(`${backendUrl}/api/get-data`, {
+        const backendUrl = process.env.NEXT_PUBLIC_EXTRACT_DATA_URL;
+        const response = await fetch(`${backendUrl}`, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
             body: JSON.stringify({ markdown, query, apiKey }),
         });
         

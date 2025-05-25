@@ -5,6 +5,47 @@
   --foreground: #171717;
 }
 
+/* Markdown content styling */
+.markdown-content {
+  font-family: monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #1a202c; /* Dark text color */
+  background-color: #f7fafc; /* Light background color */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (prefers-color-scheme: dark) {
+  .markdown-content {
+    color: #d1d5db; /* Light text color for dark mode */
+    background-color: #1f2937; /* Dark background color for dark mode */
+  }
+}
+
+.markdown-content::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.markdown-content::-webkit-scrollbar-track {
+  background: rgba(229, 231, 235, 0.4);
+  border-radius: 3px;
+}
+
+.markdown-content::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.6);
+  border-radius: 3px;
+}
+
+/* Mobile responsive tab buttons */
+@media (max-width: 640px) {
+  .tab-buttons button {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

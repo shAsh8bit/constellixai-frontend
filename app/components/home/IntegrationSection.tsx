@@ -24,9 +24,14 @@ export default function IntegrationSection() {
         </div>
         
         <div className="p-4 sm:p-6 bg-gradient-to-r from-gray-900/80 to-black/60 text-center">
-          <p className="text-sm text-gray-400">Want to learn more about implementation details?</p>
-          <a href="/docs" className="text-[#52c4c6] hover:underline text-sm font-medium inline-flex items-center gap-1 mt-1">
-            Visit GitHub
+            <p className="text-sm text-gray-400">Interested in learning how to use it with Playwright or Puppeteer?</p>
+            <a
+            href={process.env.NEXT_PUBLIC_EXAMPLES_URL}
+            className="text-[#52c4c6] hover:underline text-sm font-medium inline-flex items-center gap-1 mt-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            Examples
             <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

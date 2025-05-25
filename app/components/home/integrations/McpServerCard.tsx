@@ -22,7 +22,7 @@ export default function McpServerCard() {
         
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <a 
-            href="https://www.npmjs.com/package/constellixai-mcp" 
+            href={process.env.NEXT_PUBLIC_MCP_NPM_URL} 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 text-white text-sm font-medium rounded-md hover:bg-gray-800 transition-colors border border-red-600/70 shadow-sm shadow-red-900/30 group relative overflow-hidden"
@@ -34,7 +34,7 @@ export default function McpServerCard() {
             <span className="relative z-10">NPM Package</span>
           </a>
           <a 
-            href="https://github.com/constellixai/mcp-server" 
+            href={process.env.NEXT_PUBLIC_MCP_GITHUB_URL} 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 px-4 py-2 bg-gray-800 text-white text-sm font-medium rounded-md border border-gray-700 hover:bg-gray-700 transition-colors"

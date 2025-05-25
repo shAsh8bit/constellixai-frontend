@@ -43,9 +43,17 @@ export default function Playground() {
         setMarkdownResponse(screenshot.markdown);
         showToast("Website fetched successfully", "success");
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error capturing screenshot:", error);
-      showToast("Failed to capture website screenshot. Please check the URL and try again.", "error");
+      
+      // Handle specific error types
+      if (error.message === 'TOO_MANY_REQUESTS') {
+        showToast("Our servers are currently handling many requests. Please wait a moment and try again.", "warning");
+      } else if (error.message === 'SERVER_ERROR') {
+        showToast("Oops! Something went wrong on our end. Please try again shortly.", "error");
+      } else {
+        showToast("Unable to fetch the website screenshot. Please verify the URL and try again.", "error");
+      }
     } finally {
       setIsFetchingWebsite(false);
     }

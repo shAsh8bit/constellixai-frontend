@@ -103,7 +103,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href={process.env.NEXT_PUBLIC_MY_GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -123,7 +123,7 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#52c4c6] to-transparent rounded-full transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a
-              href="https://twitter.com"
+              href={process.env.NEXT_PUBLIC_MY_TWITTER_URL}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
