@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import { ToastProvider } from "./components/ui/Toast";
 import { GlobalStateProvider } from "./context/GlobalStateContext";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,8 @@ export default function RootLayout({
 
             {/* Main content area */}
             {children}
+            {/* Google Analytics */}
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""} />
           </ToastProvider>
         </GlobalStateProvider>
       </body>

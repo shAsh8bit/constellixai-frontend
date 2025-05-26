@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { sendGAEvent } from '@next/third-parties/google';
 
 interface ControlPanelProps {
   url: string;
@@ -70,6 +71,7 @@ export default function ControlPanel({
   }, [selectedExample]);
 
   const handleExampleSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    sendGAEvent({event: 'example_select', value: 'example selected'});
     const selectedValue = e.target.value;
     
     if (!selectedValue) return;
